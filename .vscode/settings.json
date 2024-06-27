@@ -1,0 +1,281 @@
+{
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.tabSize": 2
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //"editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[terraform-vars]": {
+    "editor.tabSize": 2
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.tabSize": 2
+  },
+  "[xml]": {
+    "editor.defaultFormatter": null
+  },
+  "C_Cpp.clang_format_style": "LLVM",
+  // Code Spell Checker Extension
+  "cSpell.language": "en, vi",
+  //
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.experimental.showMoves": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.sortImports": "never"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "'Monaspace Neon', 'JetBrains Mono', monospace, Consolas, 'Courier New'",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+  "editor.insertSpaces": true,
+  "editor.linkedEditing": true,
+  "editor.mouseWheelZoom": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.renderLineHighlight": "gutter",
+  "editor.renderWhitespace": "none",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.insertMode": "insert",
+  "editor.suggest.preview": true,
+  "editor.suggestSelection": "first",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.wordWrap": "on",
+  "errorLens.fontFamily": "'Monaspace Xenon', 'JetBrains Mono', monospace",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": true,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.json": "csharp"
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": true,
+    "scminput": false,
+    "yaml": true
+  },
+  // Highlight Matching Tag
+  "highlight-matching-tag.highlightSelfClosing": true,
+  "highlight-matching-tag.showPath": false,
+  //
+
+  "html.autoClosingTags": true,
+  "isort.args": ["--profile", "black"],
+  "javascript.autoClosingTags": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifierEnding": "index",
+  "javascript.preferences.jsxAttributeCompletionStyle": "auto",
+  "javascript.preferences.quoteStyle": "double",
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.paths": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": true,
+  "markdown.updateLinksOnFileMove.enabled": "always",
+  "markdown.validate.enabled": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "notebook.lineNumbers": "on",
+  "prettier.proseWrap": "always",
+  "redhat.telemetry.enabled": false,
+  // Rewrap Extension
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.autoWrap.notification": "text",
+  "rewrap.wrappingColumn": 80,
+  //
+  // statusbar-commands Extension
+  "statusbar_command.commands": [
+    {
+      "alignment": "left",
+      "color": "#EA76CB",
+      "command": "editor.action.fontZoomReset",
+      "id": "reset-zoom",
+      "name": "Reset Font Zoom",
+      "priority": -1,
+      "text": "$(refresh)",
+      "tooltip": "Reset font zoom"
+    },
+    {
+      "alignment": "left",
+      "color": "#E64553",
+      "command": "workbench.action.openSettingsJson",
+      "id": "open-settings",
+      "name": "Open settings.json",
+      "priority": -3,
+      "text": "$(gear)",
+      "tooltip": "Open settings.json"
+    },
+    {
+      "alignment": "left",
+      "color": "#DF8E1D",
+      "command": "sortJsObjectKeys.sortJsObjectKeys",
+      "id": "sort-object-keys",
+      "name": "Sort JS object keys (Extension)",
+      "priority": -5,
+      "text": "$(arrow-down)$(json)",
+      "tooltip": "Sort JS object keys (ascending)"
+    },
+    {
+      "alignment": "left",
+      "color": "#1E66F5",
+      "command": "extension.htmlTagWrap",
+      "filterLanguageId": "html|javascriptreact|typescriptreact|markdown",
+      "id": "htmlwrap",
+      "name": "HTML Tag Wrap (Extension)",
+      "priority": -9,
+      "text": "$(add)$(code)",
+      "tooltip": "Wraps selection in HTML tag"
+    },
+    {
+      "alignment": "left",
+      "color": "#7287FD",
+      "command": "editor.emmet.action.splitJoinTag",
+      "filterLanguageId": "html|javascriptreact|typescriptreact|markdown",
+      "id": "split-join-tag",
+      "name": "Split/Join HTML Tag (Emmet)",
+      "priority": -10,
+      "text": "$(merge)$(code)",
+      "tooltip": "Split/Join HTML tag"
+    }
+  ],
+  //
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.smoothScrolling": true,
+  // TODO Highlight Extension
+  "todohighlight.defaultStyle": {
+    "backgroundColor": "#7DAEA3",
+    "before": {
+      "contentText": "",
+      "fontStyle": "normal"
+    },
+    "borderRadius": "5px",
+    "color": "black",
+    "cursor": "text",
+    "isWholeLine": false,
+    "overviewRulerColor": "#7DAEA3"
+  },
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**"
+  ],
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.isEnable": true,
+  "todohighlight.keywords": [
+    "DONE:",
+    {
+      "backgroundColor": "#E66533",
+      "color": "black",
+      "overviewRulerColor": "#E66533",
+      "text": "BUG:"
+    },
+    {
+      "backgroundColor": "#DF769B",
+      "color": "black",
+      "overviewRulerColor": "#DF769B",
+      "text": "FIXME:"
+    },
+    {
+      "backgroundColor": "#E4B781",
+      "color": "black",
+      "overviewRulerColor": "#E4B781",
+      "text": "NOTE:"
+    },
+    {
+      "backgroundColor": "#49E9A6",
+      "color": "black",
+      "overviewRulerColor": "#49E9A6",
+      "text": "TODO:"
+    },
+    {
+      "backgroundColor": "#49ACE9",
+      "color": "black",
+      "overviewRulerColor": "#49ACE9",
+      "text": "REVIEW:"
+    }
+  ],
+  //
+  "typescript.autoClosingTags": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.commandCenter": false,
+  "window.dialogStyle": "custom",
+  "window.menuBarVisibility": "compact",
+  "window.titleBarStyle": "custom",
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "One Dark Pro Mix",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.historyBasedLanguageDetection": true,
+  "workbench.editor.scrollToSwitchTabs": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
+  "workbench.list.smoothScrolling": true,
+  "workbench.localHistory.maxFileEntries": 100,
+  "workbench.localHistory.mergeWindow": 60,
+  "workbench.tree.enableStickyScroll": true,
+  "tabnine.experimentalAutoImports": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "settingsSync.ignoredSettings": ["editor.fontFamily"],
+  "scm.inputFontFamily": "monospace",
+  "terminal.integrated.fontFamily": "monospace"
+}
