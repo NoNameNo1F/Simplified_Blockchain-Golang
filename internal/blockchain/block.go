@@ -40,6 +40,9 @@ func NewBlock(
 	return block
 }
 
+// CalculateHash calculates the hash of the block.
+//
+// It returns the hash of the block as a byte slice.
 func (block *Block) CalculateHash() []byte {
 	headers := [][]byte{
 		utils.IntToHex(block.Timestamp),
@@ -51,14 +54,9 @@ func (block *Block) CalculateHash() []byte {
 	return hash[:]
 }
 
-/*
-Summary: Function calculates Hash of all transactions are stored in a block into byte[] for representing all transactions
-
-- Input: None
-- Output: byte[]
-
-Usage: block.HashTransactions()
-*/
+// GetHashTransactions calculates the hash of all the transactions in the block.
+//
+// It returns the hashes of the transactions as a slice of byte slices.
 func (block *Block) GetHashTransactions() [][]byte {
 	var txHashes [][]byte
 
@@ -69,12 +67,18 @@ func (block *Block) GetHashTransactions() [][]byte {
 	return txHashes[:]
 }
 
+// HashTransactions calculates the hash of all the transactions in the block.
+//
+// It returns the hash of the transactions as a byte slice.
 func (block *Block) HashTransactions() []byte {
 	txHashes := block.GetHashTransactions()
 	txHash := sha256.Sum256(bytes.Join(txHashes, []byte{}))
 	return txHash[:]
 }
 
+// CalculateMerkleRoot calculates the merkle root of the transactions in the block.
+//
+// It returns a MerkleTree object representing the merkle root.
 func (block *Block) CalculateMerkleRoot() *merkle.MerkleTree {
 	txHashes := block.GetHashTransactions()
 	tree := merkle.CreateMerkleTree(txHashes)
@@ -82,6 +86,9 @@ func (block *Block) CalculateMerkleRoot() *merkle.MerkleTree {
 	return tree
 }
 
+// Verify checks if the merkle root of the block matches the calculated merkle root.
+//
+// It returns true if the merkle roots match, false otherwise.
 func (block *Block) Verify() bool {
 
 	merkleRootHash := block.CalculateMerkleRoot().RootNode.Data
@@ -93,6 +100,7 @@ func (block *Block) Verify() bool {
 	return false
 }
 
+// ShowMerkleTree displays the merkle tree of the block.
 func (block *Block) ShowMerkleTree() {
 	tree := block.CalculateMerkleRoot()
 	displayMerkleNode(tree.RootNode, "", true)
@@ -124,3 +132,5 @@ func displayMerkleNode(node *merkle.MerkleNode, prefix string, isTail bool) {
 		}
 	}
 }
+
+// Authors: https://github.com/NoNameNo1F/Simplified_Blockchain-Golang

@@ -15,10 +15,16 @@ type Blockchain struct {
 	Blocks []*Block `json:"blocks"`
 }
 
+// NewBlockchain creates a new Blockchain instance with an initial block.
+//
+// It returns a pointer to the newly created Blockchain.
 func NewBlockchain() *Blockchain {
 	return &Blockchain{Blocks: []*Block{InitBlock()}}
 }
 
+// LoadBlockchain loads the blockchain data from a file.
+//
+// It returns a pointer to the loaded Blockchain.
 func LoadBlockchain() *Blockchain {
 	//1. get file path
 	folderPath := utils.GetPath("data")
@@ -75,6 +81,10 @@ func (blockchain *Blockchain) GetTransactions() []*Transaction {
 	return blockchain.Blocks[len(blockchain.Blocks)-1].Transactions
 }
 
+// ViewBlockchain prints the blockchain by iterating over each block and printing its headers and transactions.
+//
+// No parameters.
+// No return value.
 func (blockchain *Blockchain) ViewBlockchain() {
 	for index, block := range blockchain.Blocks {
 		fmt.Printf("|--------------------------------------- Block %d ----------------------------------------|\n", index+1)
@@ -91,10 +101,17 @@ func (blockchain *Blockchain) ViewBlockchain() {
 	}
 }
 
+// GetLatestBlock returns the latest block in the blockchain.
+// No parameters.
+// Returns a pointer to the latest block.
 func (blockchain *Blockchain) GetLatestBlock() *Block {
 	return blockchain.Blocks[len(blockchain.Blocks)-1]
 }
 
+// VerifyBlock searches for a block in the blockchain by its MerkleRoot hash value and verifies its transactions.
+//
+// hashValue: a string representing the hash value to search for.
+// No return value.
 func (blockchain *Blockchain) VerifyBlock(hashValue string) {
 	isFound := false
 	isVerified := false
@@ -123,6 +140,10 @@ func (blockchain *Blockchain) VerifyBlock(hashValue string) {
 	fmt.Printf("Hash of MerkleRoot is not found\n")
 }
 
+// ViewMerkleTree searches for a specific block in the blockchain by its MerkleRoot hash value.
+//
+// hashValue: a string representing the hash value to search for.
+// No return value.
 func (blockchain *Blockchain) ViewMerkleTree(hashValue string) {
 	isFound := false
 	var target *Block
@@ -148,6 +169,15 @@ func (blockchain *Blockchain) ViewMerkleTree(hashValue string) {
 	target.ShowMerkleTree()
 }
 
+// FetchingDatabase returns a channel that receives a pointer to a Blockchain struct.
+//
+// It creates a channel of type *Blockchain and spawns a goroutine that continuously
+// loads the blockchain, sends it through the channel, and sleeps for 1 second.
+// The goroutine is responsible for closing the channel when it finishes.
+//
+// Returns:
+//
+//	<-chan *Blockchain: A channel that receives a pointer to a Blockchain struct.
 func (blockchain *Blockchain) FetchingDatabase() <-chan *Blockchain {
 	channel := make(chan *Blockchain)
 
@@ -163,3 +193,5 @@ func (blockchain *Blockchain) FetchingDatabase() <-chan *Blockchain {
 	}()
 	return channel
 }
+
+// Authors: https://github.com/NoNameNo1F/Simplified_Blockchain-Golang

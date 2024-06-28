@@ -11,11 +11,24 @@ type Transaction struct {
 	Data []byte `json:"data"`
 }
 
+// CreateTransaction creates a new Transaction object with the given data.
+//
+// Parameters:
+// - data: a string representing the data for the transaction.
+//
+// Returns:
+// - *Transaction: a pointer to the newly created Transaction object.
 func CreateTransaction(data string) *Transaction {
 	tx := Transaction{Data: []byte(data)}
 	return &tx
 }
 
+// ViewTransactions prints a list of transactions with their corresponding IDs and data.
+//
+// Parameters:
+// - transactions: a slice of pointers to Transaction structs representing the transactions to be displayed.
+//
+// Return type: None.
 func ViewTransactions(transactions []*Transaction) {
 	fmt.Println("|-List of Transactions ------------------------------------------------------------------|")
 	size := 0
@@ -27,3 +40,5 @@ func ViewTransactions(transactions []*Transaction) {
 	}
 	fmt.Printf("|----------------------------------------------------------------------------------------|\n")
 }
+
+// Authors: https://github.com/NoNameNo1F/Simplified_Blockchain-Golang
