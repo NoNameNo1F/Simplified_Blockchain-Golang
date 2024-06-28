@@ -14,6 +14,15 @@ type MerkleNode struct {
 	Data  []byte
 }
 
+// CreateMerkleNode creates a new MerkleNode by hashing the data and setting the left and right child nodes.
+//
+// Parameters:
+// - left: the left child node of the new MerkleNode.
+// - right: the right child node of the new MerkleNode.
+// - data: the data to be hashed and used as the data of the new MerkleNode.
+//
+// Returns:
+// - The newly created MerkleNode.
 func CreateMerkleNode(
 	left, right *MerkleNode,
 	data []byte,
@@ -34,6 +43,12 @@ func CreateMerkleNode(
 	return node
 }
 
+// CreateMerkleTree creates a Merkle tree from the given array of data.
+//
+// Parameter:
+// datas: a 2D byte array containing the data for each node.
+// Return:
+// A pointer to the root of the Merkle tree.
 func CreateMerkleTree(datas [][]byte) *MerkleTree {
 	var nodes []MerkleNode
 	// creating node with a specific data of transaction
@@ -66,3 +81,5 @@ func CreateMerkleTree(datas [][]byte) *MerkleTree {
 	tree := MerkleTree{RootNode: &nodes[0]}
 	return &tree
 }
+
+// Authors: https://github.com/NoNameNo1F/Simplified_Blockchain-Golang
