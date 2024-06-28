@@ -8,10 +8,14 @@ import (
 	"time"
 
 	bc "lab1-blockchain-v1.1.0/internal/blockchain"
+	"lab1-blockchain-v1.1.0/internal/logging"
 	"lab1-blockchain-v1.1.0/internal/utils"
 	test "lab1-blockchain-v1.1.0/test"
 )
 
+// main is the entry point of the program where it interacts with the blockchain through user commands.
+//
+// It reads user input, processes commands to interact with the blockchain, and handles various functionalities like adding transactions, blocks, verifying blocks, viewing transactions, and displaying help.
 func main() {
 
 	reader := bufio.NewReader(os.Stdin)
@@ -38,65 +42,96 @@ func main() {
 			switch command {
 			case "view_blockchain":
 				blockchain.ViewBlockchain()
-			// logging for view blockchain
+
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", "Viewed blockchain")
 
 			case "add_transaction":
 				if len(parts) < 2 {
-					fmt.Println("Usage: add_transaction {message}")
+					logging.SetLogOutput(true, true)
+					logging.Log("ERROR", "Failed to add transaction: insufficient arguments")
+					fmt.Println("Usage: add_transaction {message}\n")
 					continue
 				}
 				message := strings.Join(parts[1:], " ")
 				newTx := bc.CreateTransaction(message)
 				transactions = append(transactions, newTx)
-				// logging for add new transaction
+
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", fmt.Sprintf("Added new transaction: %s", message))
 
 			case "add_block":
 				if len(transactions) == 0 {
-					fmt.Printf("There are no transactions to add\n")
+					logging.SetLogOutput(true, true)
+					logging.Log("ERROR", "Failed to add block: there are no transactions")
 					continue
 				}
 
 				blockchain.AddBlock(transactions)
 				transactions = nil
 				blockchain.SaveBlockchainToFile()
+
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", "Added new block to blockchain")
+
 			case "verify_block":
 				if len(parts) < 2 {
-					fmt.Println("Usage: verify_block {hash of merkle_root}")
+					logging.SetLogOutput(true, true)
+					logging.Log("ERROR", "Failed to verify block: insufficient arguments")
+					fmt.Println()
+					fmt.Println("Usage: verify_block {hash of merkle_root}\n")
 					continue
 				}
-				data := strings.Join(parts[1:], " ")
 
+				data := strings.Join(parts[1:], " ")
 				blockchain.VerifyBlock(data)
-				// logging for verify status
+
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", fmt.Sprintf("Verified block with merkle root: %s", data))
 
 			case "view_transactions":
 				bc.ViewTransactions(transactions)
-				// logging for view current transactions not added yet
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", "Viewed current transactions not added yet")
 
 			case "print_merkletree":
 				if len(parts) < 2 {
-					fmt.Println("Usage: print_merkletree {hash of merkle_root}")
+					fmt.Println("Usage: print_merkletree {hash of merkle_root}\n")
+					logging.Log("ERROR", "Failed to print merkle tree: insufficient arguments")
 					continue
 				}
 
 				data := strings.Join(parts[1:], " ")
-
 				blockchain.ViewMerkleTree(data)
-				//logging for blockchain reset
+
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", fmt.Sprintf("Printed merkle tree for block with merkle root: %s", data))
 
 			case "help":
 				utils.ShowHelpCommand()
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", "Displayed help commands")
+
 			case "test1":
 				transactions = test.TestAddTransaction(transactions, 2)
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", "Ran test1 to add transactions")
+
 			case "test2":
 				blockchain, transactions = test.TestAddBlock(blockchain, transactions)
+				logging.SetLogOutput(false, true)
+				logging.Log("INFO", "Ran test2 to add block")
+
 			case "exit":
-				fmt.Println("Exiting...")
 				blockchain.SaveBlockchainToFile()
+				logging.SetLogOutput(true, true)
+				logging.Log("INFO", "Exiting application...")
 				os.Exit(0)
 
 			default:
-				fmt.Println("Unknown command. Type 'Help' for instructions.")
+				logging.SetLogOutput(true, true)
+				logging.Log("ERROR", fmt.Sprintf("Unknown command: %s.", command))
+				fmt.Print("Type 'Help' for instructions.\n")
 			}
 		}
 	}()
@@ -110,3 +145,5 @@ func main() {
 		}
 	}
 }
+
+// Authors: https://github.com/NoNameNo1F/Simplified_Blockchain-Golang
