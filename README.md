@@ -1,6 +1,6 @@
 <div aligns="center">
 
-  <img src="./wwwroot/fa-hcmus.png" alt="logo" width="200" height="auto" />
+  <img src="./public/images//fa-hcmus.png" alt="logo" width="200" height="auto" />
   <h1>Simplified_Blockchain-Golang</h1>
 A Simplified Blockchain and Verification Block using MerkleTree.
   <p>
@@ -78,10 +78,10 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 
 ## :camera: Screenshots
 
-### :Workflows
+### Workflows
 
 <div aligns="center">
-  <img src="./public/images/workflow.png" alt="Workflow of Project" />
+  <img src="./public/images/Blockchain.svg" alt="Workflow of Project" />
 </div>
 
 ### View Blockchain
