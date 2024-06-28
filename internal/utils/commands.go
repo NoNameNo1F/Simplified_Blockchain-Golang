@@ -4,6 +4,12 @@ import (
 	"fmt"
 )
 
+// ShowHelpCommand displays the help commands for the application.
+//
+// It prints a table with the available commands and their descriptions.
+// The commands are categorized into features, helpers, and testing.
+// Each command is represented by a number and a description.
+// The function does not take any parameters and does not return anything.
 func ShowHelpCommand() {
 	fmt.Println("|------------------------------------ Help Commands -------------------------------------|")
 	fmt.Println("|[FEATURE]1. View_Blockchain: Displays information about the entire blockchain.          |")
@@ -19,3 +25,5 @@ func ShowHelpCommand() {
 	fmt.Println("|[TESTING] 2. Test2: Test2: Testing add Block into Blockchain                            |")
 	fmt.Println("|----------------------------------------------------------------------------------------|")
 }
+
+// Authors: https://github.com/NoNameNo1F/Simplified_Blockchain-Golang
