@@ -1,0 +1,24 @@
+2024/06/28 15:15:08 [2024-06-28 15:15:08] - [INFO]: Displayed help commands
+2024/06/28 15:15:16 [2024-06-28 15:15:16] - [INFO]: Viewed current transactions not added yet
+2024/06/28 15:29:33 [2024-06-28 15:29:33] - [INFO]: Exiting application...
+2024/06/28 15:30:05 [2024-06-28 15:30:05] - [ERROR]: Unknown command: view_transaction.
+2024/06/28 15:31:22 [2024-06-28 15:31:22] - [INFO]: Displayed help commands
+2024/06/28 16:01:26 [2024-06-28 16:01:26] - [INFO]: Exiting application...
+2024/06/28 16:10:10 [2024-06-28 16:10:10] - [INFO]: Viewed blockchain
+2024/06/28 16:10:45 [2024-06-28 16:10:45] - [ERROR]: Failed to add transaction: insufficient arguments
+2024/06/28 16:13:40 [2024-06-28 16:13:40] - [INFO]: Added new transaction: Getting Started
+2024/06/28 16:14:14 [2024-06-28 16:14:14] - [INFO]: Added new transaction: //github.com/NoNameNo1F/
+2024/06/28 16:14:35 [2024-06-28 16:14:35] - [INFO]: Added new transaction: ages the collection of blocks
+2024/06/28 16:14:46 [2024-06-28 16:14:46] - [INFO]: Added new transaction: ecords important events and o
+2024/06/28 16:14:55 [2024-06-28 16:14:55] - [INFO]: Added new transaction: debugging and auditing
+2024/06/28 16:15:12 [2024-06-28 16:15:12] - [INFO]: Viewed current transactions not added yet
+2024/06/28 16:16:46 [2024-06-28 16:16:46] - [INFO]: Added new block to blockchain
+2024/06/28 16:21:27 [2024-06-28 16:21:27] - [INFO]: Viewed blockchain
+2024/06/28 16:21:42 [2024-06-28 16:21:42] - [INFO]: Verified block with merkle root: f5d70c13fc2c5b2a0526ab1ed676fe278b972f3f1061dc998abe92af501e67f0
+2024/06/28 16:22:28 [2024-06-28 16:22:28] - [INFO]: Exiting application...
+2024/06/28 16:22:36 [2024-06-28 16:22:36] - [INFO]: Verified block with merkle root: f5d70c13fc2c5b2a0526ab1ed676fe278b972f3f1061dc998abe92af501e67f0
+2024/06/28 16:22:43 [2024-06-28 16:22:43] - [INFO]: Printed merkle tree for block with merkle root: f5d70c13fc2c5b2a0526ab1ed676fe278b972f3f1061dc998abe92af501e67f0
+2024/06/28 16:23:01 [2024-06-28 16:23:01] - [INFO]: Ran test1 to add transactions
+2024/06/28 16:23:04 [2024-06-28 16:23:04] - [INFO]: Ran test2 to add block
+2024/06/28 16:24:07 [2024-06-28 16:24:07] - [INFO]: Displayed help commands
+2024/06/28 16:24:10 [2024-06-28 16:24:10] - [INFO]: Exiting application...
