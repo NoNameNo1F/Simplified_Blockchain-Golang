@@ -41,10 +41,10 @@ func main() {
 
 			switch command {
 			case "view_blockchain":
-				blockchain.ViewBlockchain()
-
 				logging.SetLogOutput(false, true)
 				logging.Log("INFO", "Viewed blockchain")
+
+				blockchain.ViewBlockchain()
 
 			case "add_transaction":
 				if len(parts) < 2 {
@@ -57,7 +57,7 @@ func main() {
 				newTx := bc.CreateTransaction(message)
 				transactions = append(transactions, newTx)
 
-				logging.SetLogOutput(false, true)
+				logging.SetLogOutput(true, true)
 				logging.Log("INFO", fmt.Sprintf("Added new transaction: %s", message))
 
 			case "add_block":
@@ -71,8 +71,8 @@ func main() {
 				transactions = nil
 				blockchain.SaveBlockchainToFile()
 
-				logging.SetLogOutput(false, true)
-				logging.Log("INFO", "Added new block to blockchain")
+				logging.SetLogOutput(true, true)
+				logging.Log("INFO", fmt.Sprintf("Added new block to blockchain with Hash: %x", blockchain.GetLatestBlock().Hash))
 
 			case "verify_block":
 				if len(parts) < 2 {
@@ -84,15 +84,17 @@ func main() {
 				}
 
 				data := strings.Join(parts[1:], " ")
-				blockchain.VerifyBlock(data)
 
 				logging.SetLogOutput(false, true)
 				logging.Log("INFO", fmt.Sprintf("Verified block with merkle root: %s", data))
 
+				blockchain.VerifyBlock(data)
+
 			case "view_transactions":
-				bc.ViewTransactions(transactions)
 				logging.SetLogOutput(false, true)
 				logging.Log("INFO", "Viewed current transactions not added yet")
+
+				bc.ViewTransactions(transactions)
 
 			case "print_merkletree":
 				if len(parts) < 2 {
@@ -102,10 +104,11 @@ func main() {
 				}
 
 				data := strings.Join(parts[1:], " ")
-				blockchain.ViewMerkleTree(data)
 
 				logging.SetLogOutput(false, true)
 				logging.Log("INFO", fmt.Sprintf("Printed merkle tree for block with merkle root: %s", data))
+
+				blockchain.ViewMerkleTree(data)
 
 			case "help":
 				utils.ShowHelpCommand()
