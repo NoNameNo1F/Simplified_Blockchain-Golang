@@ -8,3 +8,5 @@ for /L %%i in (1, 1, 5) do (
 
 REM Keep the scriptwindow open to view output
 pause
+
+REM // Authors: https://github.com/NoNameNo1F/Simplified_Blockchain-Golang
