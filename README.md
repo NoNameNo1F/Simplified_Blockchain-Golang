@@ -183,6 +183,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 ### :eyes: Usage
 
 1. Run the application:
+
     a. Run with the output file (.exe)
 
    ```sh
@@ -346,7 +347,7 @@ This project is licensed under the GPL-3.0-version License. See the
 
 ## :handshake: Contact
 
-:envelope: Nguyễn Cao Nam Vũ [:vietnam:] - [Linkedin](linkedin.com/in/vu-nguyen-a61a83235) - NoNameNo1F@gmail.com
+:envelope: Nguyễn Cao Nam Vũ [:vietnam:] - [Linkedin](https://www.linkedin.com/in/vu-nguyen-a61a83235/) - NoNameNo1F@gmail.com
 
 Project Link: [https://github.com/NoNameNo1F/Simplified_Blockchain-Golang](https://github.com/NoNameNo1F/Simplified_Blockchain-Golang)
 
