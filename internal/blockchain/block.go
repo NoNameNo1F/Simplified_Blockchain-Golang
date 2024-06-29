@@ -57,7 +57,7 @@ func (block *Block) CalculateHash() []byte {
 // GetHashTransactions calculates the hash of all the transactions in the block.
 //
 // It returns the hashes of the transactions as a slice of byte slices.
-func (block *Block) GetHashTransactions() [][]byte {
+func (block *Block) GetTransactions() [][]byte {
 	var txHashes [][]byte
 
 	// append the hashes into list transactions
@@ -71,7 +71,7 @@ func (block *Block) GetHashTransactions() [][]byte {
 //
 // It returns the hash of the transactions as a byte slice.
 func (block *Block) HashTransactions() []byte {
-	txHashes := block.GetHashTransactions()
+	txHashes := block.GetTransactions()
 	txHash := sha256.Sum256(bytes.Join(txHashes, []byte{}))
 	return txHash[:]
 }
@@ -80,7 +80,7 @@ func (block *Block) HashTransactions() []byte {
 //
 // It returns a MerkleTree object representing the merkle root.
 func (block *Block) CalculateMerkleRoot() *merkle.MerkleTree {
-	txHashes := block.GetHashTransactions()
+	txHashes := block.GetTransactions()
 	tree := merkle.CreateMerkleTree(txHashes)
 
 	return tree

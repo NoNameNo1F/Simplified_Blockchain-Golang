@@ -77,10 +77,6 @@ func (blockchain *Blockchain) AddBlock(transactions []*Transaction) {
 	// Logging New Block added
 }
 
-func (blockchain *Blockchain) GetTransactions() []*Transaction {
-	return blockchain.Blocks[len(blockchain.Blocks)-1].Transactions
-}
-
 // ViewBlockchain prints the blockchain by iterating over each block and printing its headers and transactions.
 //
 // No parameters.
