@@ -96,7 +96,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 #### :woozy_face: View Blockchain Sequence Diagram
 
 <div aligns="center">
-  <img src="./public/images/ViewBlockchain_SequenceDiagram.png" alt="Sequence Diagram of View Blockchain" />
+  <img src="./public/images/ViewBlockchain_SequenceDiagram.svg" alt="Sequence Diagram of View Blockchain" />
 </div>
 
 ### Add Transaction
@@ -108,7 +108,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 #### :mask: Add Transaction Sequence Diagram
 
 <div aligns="center">
-  <img src="./public/images/AddTransaction_SequenceDiagram.png" alt="Sequence Diagram of Add Transaction" />
+  <img src="./public/images/AddTransaction_SequenceDiagram.svg" alt="Sequence Diagram of Add Transaction" />
 </div>
 
 ### Add Block
@@ -120,7 +120,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 #### :face_with_spiral_eyes: Add Block Sequence Diagram
 
 <div aligns="center">
-  <img src="./public/images/AddBlock_SequenceDiagram.png" alt="Sequence Diagram of Add Block" />
+  <img src="./public/images/AddBlock_SequenceDiagram.svg" alt="Sequence Diagram of Add Block" />
 </div>
 
 ### Verify Block
@@ -132,7 +132,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 #### :face_with_thermometer: Verify Block Sequence Diagram
 
 <div aligns="center">
-  <img src="./public/images/VerifyBlock_SequenceDiagram.png" alt="Sequence Diagram of Verify Block" />
+  <img src="./public/images/VerifyBlock_SequenceDiagram.svg" alt="Sequence Diagram of Verify Block" />
 </div>
 
 ### View Transactions
@@ -144,7 +144,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 #### :sneezing_face: View Transactions Sequence Diagram
 
 <div aligns="center">
-  <img src="./public/images/ViewTransactions_SequenceDiagram.png" alt="Sequence Diagram of View Transactions" />
+  <img src="./public/images/ViewTransactions_SequenceDiagram.svg" alt="Sequence Diagram of View Transactions" />
 </div>
 
 ### Print MerkleTree
@@ -156,7 +156,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 #### :dizzy_face: Print MerkleTree Sequence Diagram
 
 <div aligns="center">
-  <img src="./public/images/PrintMerkleTree_SequenceDiagram.png" alt="Sequence Diagram of Print MerkleTree" />
+  <img src="./public/images/PrintMerkleTree_SequenceDiagram.svg" alt="Sequence Diagram of Print MerkleTree" />
 </div>
 
 ## :toolbox: Getting Started
