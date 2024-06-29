@@ -22,3 +22,27 @@
 2024/06/28 16:23:04 [2024-06-28 16:23:04] - [INFO]: Ran test2 to add block
 2024/06/28 16:24:07 [2024-06-28 16:24:07] - [INFO]: Displayed help commands
 2024/06/28 16:24:10 [2024-06-28 16:24:10] - [INFO]: Exiting application...
+2024/06/29 02:00:49 [2024-06-29 02:00:49] - [INFO]: Exiting application...
+2024/06/29 11:32:32 [2024-06-29 11:32:32] - [INFO]: Viewed blockchain
+2024/06/29 11:32:35 [2024-06-29 11:32:35] - [ERROR]: Unknown command: [a.
+2024/06/29 11:32:41 [2024-06-29 11:32:41] - [ERROR]: Unknown command: [a[bview_blockchain.
+2024/06/29 11:33:11 [2024-06-29 11:33:11] - [ERROR]: Unknown command: [a[view_blockchain.
+2024/06/29 11:33:18 [2024-06-29 11:33:18] - [INFO]: Viewed blockchain
+2024/06/29 11:34:56 [2024-06-29 11:34:56] - [INFO]: Viewed blockchain
+2024/06/29 11:37:29 [2024-06-29 11:37:29] - [INFO]: Added new transaction: Nguyễn Cao Nam Vũ - 20127670
+2024/06/29 11:37:38 [2024-06-29 11:37:38] - [INFO]: Added new transaction: Golang Console To Demonstrate Blockchain
+2024/06/29 11:38:13 [2024-06-29 11:38:13] - [INFO]: Added new transaction: nosql and characteristic of its
+2024/06/29 11:38:25 [2024-06-29 11:38:25] - [INFO]: Added new transaction: ensurong data availability
+2024/06/29 11:38:40 [2024-06-29 11:38:40] - [INFO]: Added new transaction: low consistent
+2024/06/29 11:41:44 [2024-06-29 11:41:44] - [ERROR]: Unknown command: view_transaction.
+2024/06/29 11:41:49 [2024-06-29 11:41:49] - [INFO]: Viewed current transactions not added yet
+2024/06/29 11:42:15 [2024-06-29 11:42:15] - [INFO]: Added new block to blockchain with Hash: 96594f6ac2880f24c39201ec0805a1aad2fa3bd0f76b064ae2a8b60bca0bc845
+2024/06/29 11:42:49 [2024-06-29 11:42:49] - [INFO]: Verified block with merkle root: 96594f6ac2880f24c39201ec0805a1aad2fa3bd0f76b064ae2a8b60bca0bc845
+2024/06/29 11:43:09 [2024-06-29 11:43:09] - [INFO]: Verified block with merkle root: 96594f6ac2880f24c39201ec0805a1aad2fa3bd0f76b064ae2a8b60bca0bc845
+2024/06/29 11:43:43 [2024-06-29 11:43:43] - [ERROR]: Unknown command: view_merkletree.
+2024/06/29 11:43:51 [2024-06-29 11:43:51] - [INFO]: Viewed blockchain
+2024/06/29 11:44:18 [2024-06-29 11:44:18] - [INFO]: Verified block with merkle root: 6faaf04b31ba72f10ade82dd9f83f07b2c5037dd4abfc301386520018b686e55
+2024/06/29 11:45:03 [2024-06-29 11:45:03] - [INFO]: Printed merkle tree for block with merkle root: 6faaf04b31ba72f10ade82dd9f83f07b2c5037dd4abfc301386520018b686e55
+2024/06/29 11:45:30 [2024-06-29 11:45:30] - [INFO]: Exiting application...
+2024/06/29 15:33:32 [2024-06-29 15:33:32] - [INFO]: Viewed blockchain
+2024/06/29 15:33:36 [2024-06-29 15:33:36] - [INFO]: Exiting application...
