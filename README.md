@@ -7,7 +7,7 @@ A Simplified Blockchain and Verification Block using MerkleTree.
     This is project about implementation of Blockchain and Verification Block using MerkleTree which is written in Golang.
   </p>
    <p>
-     Author: Nguyễn Cao Nam Vũ - 20127670
+     Author: :copyright: Nguyễn Cao Nam Vũ - 20127670 :clown_face:
   </p>
   <p>
     Golang Console To Demonstrate Blockchain
@@ -68,17 +68,20 @@ This project is a simple implementation of a blockchain in Go. It allows users t
 
 ## :dart: Key Features
 
-- [x] View the entire blockchain
-- [x] Add transactions
-- [x] Add block
-- [x] Verify block by MerkleRoot
-- [x] View current transactions
-- [x] View the Merkle tree of specific block
-- [x] Test functionalities
+- [x] View the entire blockchain :tada:
+- [x] Add transactions :tada:
+- [x] Add block :tada:
+- [x] Verify block by MerkleRoot :tada:
+- [x] View current transactions :tada:
+- [x] View the Merkle tree of specific block :tada:
+- [x] Test functionalities :tada:
+- [x] Draw Activities and Sequences Diagram for illustrating.
 
 ## :camera: Screenshots
 
 ### Workflows
+
+#### :exploding_head: Activities Diagram
 
 <div aligns="center">
   <img src="./public/images/Blockchain.svg" alt="Workflow of Project" />
@@ -90,10 +93,22 @@ This project is a simple implementation of a blockchain in Go. It allows users t
   <img src="./public/images/view_blockchain_image.png" alt="View Blockchain Image" />
 </div>
 
+#### :woozy_face: View Blockchain Sequence Diagram
+
+<div aligns="center">
+  <img src="./public/images/ViewBlockchain_SequenceDiagram.png" alt="Sequence Diagram of View Blockchain" />
+</div>
+
 ### Add Transaction
 
 <div aligns="center">
   <img src="./public/images/add_transaction_image.png" alt="Add Transaction Image" />
+</div>
+
+#### :mask: Add Transaction Sequence Diagram
+
+<div aligns="center">
+  <img src="./public/images/AddTransaction_SequenceDiagram.png" alt="Sequence Diagram of Add Transaction" />
 </div>
 
 ### Add Block
@@ -102,10 +117,22 @@ This project is a simple implementation of a blockchain in Go. It allows users t
   <img src="./public/images/add_block_image.png" alt="Add Block Image" />
 </div>
 
+#### :face_with_spiral_eyes: Add Block Sequence Diagram
+
+<div aligns="center">
+  <img src="./public/images/AddBlock_SequenceDiagram.png" alt="Sequence Diagram of Add Block" />
+</div>
+
 ### Verify Block
 
 <div aligns="center">
   <img src="./public/images/verify_block_image.png" alt="Verify Block Image" />
+</div>
+
+#### :face_with_thermometer: Verify Block Sequence Diagram
+
+<div aligns="center">
+  <img src="./public/images/VerifyBlock_SequenceDiagram.png" alt="Sequence Diagram of Verify Block" />
 </div>
 
 ### View Transactions
@@ -114,12 +141,23 @@ This project is a simple implementation of a blockchain in Go. It allows users t
   <img src="./public/images/view_transactions_image.png" alt="View Transactions Image" />
 </div>
 
+#### :sneezing_face: View Transactions Sequence Diagram
+
+<div aligns="center">
+  <img src="./public/images/ViewTransactions_SequenceDiagram.png" alt="Sequence Diagram of View Transactions" />
+</div>
+
 ### Print MerkleTree
 
 <div aligns="center">
   <img src="./public/images/print_merkletree_image.png" alt="Print Merkletree Image" />
 </div>
 
+#### :dizzy_face: Print MerkleTree Sequence Diagram
+
+<div aligns="center">
+  <img src="./public/images/PrintMerkleTree_SequenceDiagram.png" alt="Sequence Diagram of Print MerkleTree" />
+</div>
 
 ## :toolbox: Getting Started
 
@@ -162,7 +200,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
     ./scripts/blockchain.bat
     ```
 
-2. Use the CLI commands:
+2. Use the CLI commands :eyes: :
    - `view_blockchain`: Displays the entire blockchain.
    - `add_transaction {message}`: Adds a new transaction.
    - `add_block`: Adds a block with the current transactions.
@@ -174,7 +212,7 @@ This project is a simple implementation of a blockchain in Go. It allows users t
    - `test2`: Adds a test block for fast add_block into blockchain.
    - `exit`: Exits the application.
 
-## Folder Structure
+## :file_folder: Folder Structure
 ---
 
 ```shell
@@ -218,24 +256,24 @@ Simplified_Blockchain_Golang/
         └── ...
 ```
 
-# How It Works
+# :gear: How It Works
 
 The project is structured around several key components:
 
-- **Main Application**: The entry point of the program where it interacts with the blockchain through user commands.
-- **Blockchain**: Manages the collection of blocks and transactions.
-- **Blocks**: Each block contains a set of transactions, a timestamp, a hash of the previous block, and a Merkle root.
-- **Transactions**: Represents individual transactions in the blockchain.
-- **Merkle Tree**: A data structure used to verify the integrity of the transactions in a block.
-- **Logging**: Records important events and operations for debugging and auditing purposes.
+- :file_folder: **Main Application**: The entry point of the program where it interacts with the blockchain through user commands.
+- :file_folder: **Blockchain**: Manages the collection of blocks and transactions.
+- :file_folder: **Blocks**: Each block contains a set of transactions, a timestamp, a hash of the previous block, and a Merkle root.
+- :file_folder: **Transactions**: Represents individual transactions in the blockchain.
+- :file_folder: **Merkle Tree**: A data structure used to verify the integrity of the transactions in a block.
+- :file_folder: **Logging**: Records important events and operations for debugging and auditing purposes.
 
-## Explain Functions
+## :information_desk_person: Explain Functions
 
-### main.go
+### :card_index_dividers: main.go
 
 - **main**: Entry point of the program. Handles user commands and interacts with the blockchain.
 
-### block.go
+### :card_index_dividers: block.go
 
 - **NewBlock**: Creates a new block with transactions and the hash of the previous block.
 - **CalculateHash**: Calculates the hash of the block.
@@ -245,7 +283,7 @@ The project is structured around several key components:
 - **Verify**: Verifies if the Merkle root matches the calculated Merkle root.
 - **ShowMerkleTree**: Displays the Merkle tree of the block.
 
-### blockchain.go
+### :card_index_dividers: blockchain.go
 
 - **NewBlockchain**: Creates a new blockchain with an initial block.
 - **LoadBlockchain**: Loads the blockchain data from a file.
@@ -259,32 +297,32 @@ The project is structured around several key components:
 - **ViewMerkleTree**: Displays the Merkle tree of a specific block.
 - **FetchingDatabase**: Continuously loads the blockchain and sends it through a channel.
 
-### transaction.go
+### :card_index_dividers: transaction.go
 
 - **CreateTransaction**: Creates a new transaction.
 - **ViewTransactions**: Prints a list of transactions.
 
-### logger.go
+### :card_index_dividers: logger.go
 
 - **Log**: Logs a message with a timestamp and log type.
 
-### merkletree.go
+### :card_index_dividers: merkletree.go
 
 - **CreateMerkleNode**: Creates a new Merkle node.
 - **CreateMerkleTree**: Creates a Merkle tree from an array of data.
 
-### commands.go
+### :card_index_dividers: commands.go
 
 - **ShowHelpCommand**: Displays the help commands for the application.
 
-### helpers.go
+### :card_index_dividers: helpers.go
 
 - **IntToHex**: Converts an integer to its hexadecimal representation.
 - **GenerateSpacing**: Generates a string of spaces with a specified size.
 - **GetPath**: Returns the absolute path of a given path.
 - **GetFileByExtens**: Retrieves the file with the specified extension in a given folder.
 
-### tests.go
+### :card_index_dividers: tests.go
 
 - **TestAddTransaction**: Adds a specified number of test transactions.
 - **TestAddBlock**: Adds a test block to the blockchain.
@@ -303,11 +341,12 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## :warning: License
 
-This project is licensed under the GPL-3.0-version License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-3.0-version License. See the
+[LICENSE](LICENSE) file for details. :raised_hands:
 
 ## :handshake: Contact
 
-Nguyễn Cao Nam Vũ - [Linkedin](linkedin.com/in/vu-nguyen-a61a83235) - NoNameNo1F@gmail.com
+:envelope: Nguyễn Cao Nam Vũ [:vietnam:] - [Linkedin](linkedin.com/in/vu-nguyen-a61a83235) - NoNameNo1F@gmail.com
 
 Project Link: [https://github.com/NoNameNo1F/Simplified_Blockchain-Golang](https://github.com/NoNameNo1F/Simplified_Blockchain-Golang)
 
@@ -321,8 +360,9 @@ For questions or inquiries, please contact:
 
 ## :book: Documentation
 
-- [Devdocs-Go](https://devdocs.io/go/)
-- [MerkleTree Illustration](https://blockchain-academy.hs-mittweida.de/merkle-tree/)
-- [Blockchain Abstract Structure](https://www.researchgate.net/figure/The-structure-of-a-Blockchain-A-block-is-composed-of-a-header-and-a-body-where-a-header_fig1_337306138)
-- [MerkleTree-Details](https://www.geeksforgeeks.org/blockchain-merkle-trees/)
-- [Golang Folder Structure](https://github.com/golang-standards/project-layout)
+> [!NOTE]
+> [Devdocs-Go](https://devdocs.io/go/)
+> [MerkleTree Illustration](https://blockchain-academy.hs-mittweida.de/merkle-tree/)
+> [Blockchain Abstract Structure](https://www.researchgate.net/figure/The-structure-of-a-Blockchain-A-block-is-composed-of-a-header-and-a-body-where-a-header_fig1_337306138)
+> [MerkleTree-Details](https://www.geeksforgeeks.org/blockchain-merkle-trees/)
+> [Golang Folder Structure](https://github.com/golang-standards/project-layout)
